@@ -8,6 +8,6 @@ const dashboardController = require('../app/controllers/dashboardController');
  * post:
  *  tags:
  *      -dashboard:
- *      summary: get api for recrutirer dashboard
+ *      summary: get api for recruiter dashboard
  */
-router.get('/api/dashboard', dashboardController.get);
+router.get('/api/dashboard', () => dashboardController.get);

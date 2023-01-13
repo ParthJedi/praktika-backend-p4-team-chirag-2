@@ -1,27 +1,27 @@
 const express = require('express');
 const router = express.Router();
-const recrutirerController = require('../app/controllers/recruiterController');
+const recruiterController = require('../app/controllers/recruiterController');
 
 /**
 /**
  * @openpi
- * /api/recrutirer/getcandidates
+ * /api/recruiter/getcandidates
  * post:
  *  tags:
- *      -recrutirer:
+ *      -recruiter:
  *      summary: Get all candidate by filter
  */
-router.get('/api/candidates-list', recrutirerController.getcandidatelist);
+router.get('/api/candidates-list', () => recruiterController.getcandidatelist);
 
 /**
  * @openpi
- * /api/recrutirer/candidate/sendrequest
+ * /api/recruiter/candidate/sendrequest
  * post:
  *  tags:
- *      -recrutirer candidate sent request:
+ *      -recruiter candidate sent request:
  *      summary: sent request to candidate regarding job vacancy
  */
 router.put(
-  '/api/recrutirer/candidates-list/sendrequest',
-  recrutirerController.sentcandidateinvite
+	'/api/recruiter/candidates-list/sendrequest',
+	() => recruiterController.sentcandidateinvite
 );

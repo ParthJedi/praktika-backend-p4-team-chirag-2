@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const recrutirerController = require('../app/controllers/recruiterController');
+const recruiterController = require('../app/controllers/recruiterController');
 const vacancyController = require('../app/controllers/vacancyController');
 const dashboardController = require('../app/controllers/DashboardController');
 /**
